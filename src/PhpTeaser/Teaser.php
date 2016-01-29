@@ -55,6 +55,8 @@ class Teaser {
 
 	/** Extract article from a page using php-readability */
 	function getArticle($url) {
+		
+		$html = file_get_contents($url);
 
 		$Readability = new Readability($html, $url);
 		
