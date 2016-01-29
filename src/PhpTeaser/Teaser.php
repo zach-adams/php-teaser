@@ -63,8 +63,8 @@ class Teaser {
 		$result = $Readability->init();
 		
 		$results = array(
-			'title' => $readability->getTitle()->textContent,
-			'content' => $readability->getContent()->textContent,
+			'title' => $Readability->getTitle()->textContent,
+			'content' => $Readability->getContent()->textContent,
 		);
 
 		return $results;
