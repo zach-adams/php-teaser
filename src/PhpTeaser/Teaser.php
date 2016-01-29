@@ -1,4 +1,7 @@
 <?php namespace PhpTeaser;
+
+use Readability\Readability;
+
 /**
 	* Create a summary from long text blocks
 	*
@@ -52,16 +55,14 @@ class Teaser {
 
 	/** Extract article from a page using php-readability */
 	function getArticle($url) {
-		require 'class.Readability.php';
 
-		$html = file_get_contents($url);
-		$html_input_charset = 'utf-8';
-
-		$Readability = new Readability($html, $html_input_charset); // default charset is utf-8
-		$ReadabilityData = $Readability->getContent();
+		$Readability = new Readability($html, $url);
+		
+		$result = $Readability->init();
+		
 		$results = array(
-			'title' => $ReadabilityData['title'],
-			'content' => $ReadabilityData['content']
+			'title' => $readability->getTitle()->textContent,
+			'content' => $readability->getContent()->textContent,
 		);
 
 		return $results;
