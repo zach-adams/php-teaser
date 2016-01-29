@@ -15,5 +15,7 @@
             "PhpTeaser\\":"src/PhpTeaser"
         }
     },
-    "require": {}
+    "require": {
+        "j0k3r/php-readability": "dev-master"
+    }
 }
