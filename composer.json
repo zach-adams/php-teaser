@@ -16,6 +16,6 @@
         }
     },
     "require": {
-        "j0k3r/php-readability": "dev-master"
+        "j0k3r/php-readability": "^1.0"
     }
 }
