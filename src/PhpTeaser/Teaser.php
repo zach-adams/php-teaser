@@ -224,6 +224,7 @@ class Teaser {
 		    | Jr\.              # or "Jr.",
 		    | Dr\.              # or "Dr.",
 		    | Prof\.            # or "Prof.",
+		    | Sen\.            	# or "Sen.",
 		    | Sr\.              # or "Sr.",
 		    | T\.V\.A\.         # or "T.V.A.",
 		    | [A-Z]\.           # or Middle Initial
